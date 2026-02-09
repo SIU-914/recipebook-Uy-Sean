@@ -4,7 +4,10 @@
 <h2>Recipes</h2>
 
 <ul>
-    <li><a href="/recipe/1">Recipe 1</a></li>
-    <li><a href="/recipe/2">Recipe 2</a></li>
+    {% for recipe in recipes %}
+        <li>
+            <a href="{{ recipe.link }}">{{ recipe.name }}</a>
+        </li>
+    {% endfor %}
 </ul>
 {% endblock %}
