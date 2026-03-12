@@ -17,6 +17,7 @@ urlpatterns = [
          name='logout'),
 
     path('accounts/', include('django.contrib.auth.urls')),
-
+    path('recipe/add/', views.RecipeCreateView.as_view(), name='recipe_add'),
+    path('recipe/<int:pk>/add_image/', views.RecipeImageCreateView.as_view(), name='add_image'),
 ]
 
